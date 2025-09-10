@@ -15,6 +15,7 @@
         version = "0.1.0";
         src = ./.;
         npmDepsHash = "sha256-gGiNDtxgof7L5y3bH7VWukezEMZbzYkSDdovUwaKQGA=";
+        meta.mainProgram = "atproto-basic-notifications";
       };
   in {
     overlays.default = final: prev: {
