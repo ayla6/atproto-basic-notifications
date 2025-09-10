@@ -1,11 +1,19 @@
 {
+  "name": "atproto-basic-notifications",
+  "version": "0.1.0",
+  "description": "a basic notification system for atproto stuff",
+  "author": {
+    "name": "aylac",
+    "url": "https://aylac.top"
+  },
+  "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "prestart": "npm run build",
+    "build": "npm install && tsc",
     "start": "node dist/index.js",
-    "dev": "tsc --watch",
-    "clean": "rm -rf dist *.tsbuildinfo",
-    "lint": "echo 'No linting configured yet.'"
+    "dev": "tsc --watch"
+  },
+  "bin": {
+    "atproto-basic-notifications": "dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^24.3.1",
