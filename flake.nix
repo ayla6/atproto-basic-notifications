@@ -14,7 +14,7 @@
         pname = "atproto-basic-notifications";
         version = "0.1.0";
         src = ./.;
-        npmDepsHash = "sha256-gGiNDtxgof7L5y3bH7VWukezEMZbzYkSDdovUwaKQGA=";
+        npmDepsHash = "sha256-TWw+/vTB3Ai4wTakUvYEI8/NYPdgudAkxZteR/55tcw=";
         meta.mainProgram = "atproto-basic-notifications";
       };
   in {

@@ -10,7 +10,14 @@
     "module": "NodeNext",
     "moduleResolution": "nodenext",
     "target": "esnext",
-    "types": ["@types/node", "@atcute/lexicons"],
+    "types": [
+      "@types/node",
+      "@atcute/lexicons",
+      "@atcute/atproto",
+      "@atcute/bluesky",
+      "@atcute/tangled",
+      "@atcute/identity-resolver"
+    ],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
