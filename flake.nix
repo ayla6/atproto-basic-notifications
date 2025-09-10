@@ -7,13 +7,17 @@
     self,
     nixpkgs,
   }: let
-    pkgs = nixpkgs.legacyPackages."x86_64-linux";
+    systems = ["x86_64-linux" "aarch64-linux"];
   in {
-    packages."x86_64-linux".default = pkgs.buildNpmPackage {
-      pname = "atproto-basic-notifications";
-      version = "0.1.0";
-      src = ./.;
-      npmDepsHash = "sha256-gGiNDtxgof7L5y3bH7VWukezEMZbzYkSDdovUwaKQGA=";
-    };
+    packages = nixpkgs.lib.genAttrs systems (system: let
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      default = pkgs.buildNpmPackage {
+        pname = "atproto-basic-notifications";
+        version = "0.1.0";
+        src = ./.;
+        npmDepsHash = "sha256-gGiNDtxgof7L5y3bH7VWukezEMZbzYkSDdovUwaKQGA=";
+      };
+    });
   };
 }
